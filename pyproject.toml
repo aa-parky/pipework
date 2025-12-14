@@ -28,6 +28,7 @@ dev = [
     "pytest-cov>=4.1.0",
     "mypy>=1.8.0",
     "ruff>=0.2.0",
+    "bandit[toml]>=1.7.0",
 ]
 
 [project.urls]
@@ -151,3 +152,10 @@ exclude_lines = [
     "if TYPE_CHECKING:",
     "@abstractmethod",
 ]
+
+# ---- bandit configuration ----
+
+[tool.bandit]
+targets = ["pipework"]
+exclude_dirs = ["/tests", "/examples"]
+skips = []  # Add specific test IDs to skip if needed (e.g., ["B101", "B601"])
