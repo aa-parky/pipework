@@ -1,3 +1,3 @@
-from .engine import PipeworkEngine, Action, Outcome
+from .engine import Action, Outcome, PipeworkEngine
 
 __all__ = ["PipeworkEngine", "Action", "Outcome"]
